@@ -13,6 +13,12 @@ programmatically (Python + PIL, DejaVu fonts) so every headline is crisp and
 legible. No AI image generation was used for the page itself: image
 generators garble long text, and this page is meant to be read.
 
+**Design (v2):** modern SaaS-hero language — giant bold sans headline with
+one vivid-red accent word (**FALLS**), clean white background with lots of
+breathing room, rounded cards with thin borders, bright colour-coded pills
+per region, blue + yellow pill buttons, and a scatter of colourful tiles in
+the hero. Same 36 stories as v1; only the presentation changed.
+
 ## Lead stories
 
 1. **KERCH BRIDGE FALLS** — Ukraine struck the 19 km bridge to Crimea for a
