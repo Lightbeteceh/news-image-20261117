@@ -143,31 +143,44 @@ def main():
     draw_wrapped(d, px, hy0 + 228, lead, F(SANS, 14), 600, fill=GREY_D, lh=18, max_lines=2)
 
     # hero right: scatter of colourful tiles (the reference's icon field)
-    tx0, ty0 = hx1 - 288, hy0 + 22
+    tx0, ty0 = hx1 - 312, hy0 + 16
+    # ~22 tiles in a loose staggered cloud (reference: denser top-right,
+    # sparser bottom). Fixed jitter table -> deterministic, no randomness.
+    BLACK = (15, 23, 42)
     tiles = [
         # (dx, dy, size, color, kind, label)
-        (0, 0, 58, RED, "bolt", None),
-        (70, 8, 58, BLUE, "circle", None),
-        (140, 0, 58, YELLOW, "num", "2"),
-        (210, 10, 58, C_ASIA, "diamond", None),
-        (12, 72, 58, C_AFRICA, "triangle", None),
-        (82, 80, 58, C_MIDEAST, "num", "3"),
-        (152, 72, 58, C_LATAM, "circle", None),
-        (222, 80, 58, C_NAMER, "bolt", None),
-        (30, 144, 58, C_ASIA, "diamond", None),
-        (100, 152, 58, YELLOW, "num", "4"),
-        (170, 144, 58, RED, "triangle", None),
-        (232, 152, 52, BLUE, "circle", None),
+        (0, 0, 42, RED, "bolt", None),
+        (48, 4, 42, BLUE, "circle", None),
+        (96, 0, 42, YELLOW, "num", "2"),
+        (144, 4, 42, C_ASIA, "diamond", None),
+        (192, 0, 42, BLACK, "triangle", None),
+        (240, 4, 42, C_AFRICA, "circle", None),
+        (8, 50, 42, C_AFRICA, "triangle", None),
+        (54, 54, 42, C_MIDEAST, "num", "3"),
+        (100, 50, 42, C_LATAM, "circle", None),
+        (146, 54, 42, C_NAMER, "bolt", None),
+        (192, 50, 42, YELLOW, "diamond", None),
+        (238, 54, 42, RED, "circle", None),
+        (0, 100, 42, C_ASIA, "diamond", None),
+        (52, 104, 42, BLACK, "bolt", None),
+        (104, 100, 42, YELLOW, "num", "4"),
+        (156, 104, 42, RED, "triangle", None),
+        (208, 100, 42, BLUE, "circle", None),
+        (20, 150, 42, C_NAMER, "bolt", None),
+        (72, 154, 42, C_LATAM, "diamond", None),
+        (124, 150, 42, C_AFRICA, "circle", None),
+        (176, 154, 42, C_MIDEAST, "triangle", None),
+        (228, 150, 42, BLUE, "bolt", None),
     ]
-    for dx, dy, s, col, kind, label in tiles:
-        tile(d, tx0 + dx, ty0 + dy, s, col, kind)
+    for dx, dy, s_, col, kind, label in tiles:
+        tile(d, tx0 + dx, ty0 + dy, s_, col, kind)
         if label:
-            f_n = F(SANS_B, 24)
+            f_n = F(SANS_B, 20)
             tw2 = d.textlength(label, font=f_n)
             num_col = INK if col == YELLOW else WHITE
-            d.text((tx0 + dx + (s - tw2) / 2, ty0 + dy + s // 2 - 13),
+            d.text((tx0 + dx + (s_ - tw2) / 2, ty0 + dy + s_ // 2 - 11),
                    label, font=f_n, fill=num_col)
-    d.text((tx0, ty0 + 216), "2  IRAN  •  3  SHENZHEN  •  4  HORMUZ",
+    d.text((tx0, ty0 + 202), "2  IRAN  •  3  SHENZHEN  •  4  HORMUZ",
            font=F(SANS_B, 11), fill=GREY)
 
     # ---- Top 3 cards ----
