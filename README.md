@@ -1,5 +1,9 @@
 # The World in One Day — 17 November 2026
 
+[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![rank](https://make.fun/badge/news-image-20261117/Lightbeteceh/news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![reward](https://make.fun/badge/news-image-20261117/Lightbeteceh/news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+
 Entry for the [make.fun bounty `news-image-20261117`](https://make.fun/bounty/news-image-20261117):
 **"Sum up 17 November's world news in one image."**
 
@@ -55,7 +59,7 @@ byte-identical output. The image was produced by `render.py` in this repo
 
 ## Verification
 
-- Image: 1024×1024 px PNG, ~155 KB (limit: 1 MiB, 1024×1024)
+- Image: 1024×1024 px PNG, ~166 KB (limit: 1 MiB, 1024×1024)
 - Two runs of `main.py` → identical SHA-256
 - Read at full size: all 36 headlines legible, no overflow or clipping
 
